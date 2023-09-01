@@ -1,6 +1,6 @@
 # dataset settings
 dataset_type = 'CustomDataset'
-data_root = 'data_dir/kvasir'
+data_root = 'data_dir'
 
 train_pipeline = [
     dict(type='LoadImageFromFile'),
