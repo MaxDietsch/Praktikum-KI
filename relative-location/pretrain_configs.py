@@ -33,7 +33,7 @@ default_hooks = dict(
 work_dir = './work_dirs/selfsup/relative-loc_resnet50_8xb64-steplr-70e_in1k_colab'
 
 # Output logs for every 10 iterations
-default_hooks.logger.interval = 10
+#default_hooks.logger.interval = 10
 # Set the random seed and enable the deterministic option of cuDNN
 # to keep the results' reproducible.
 randomness = dict(seed=0, deterministic=True)
