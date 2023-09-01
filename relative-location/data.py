@@ -1,6 +1,6 @@
 # dataset settings
-dataset_type = 'mmcls.ImageNet'
-data_root = 'data/imagenet/'
+dataset_type = 'CustomDataset'
+data_root = 'data_dir/kvasir'
 
 train_pipeline = [
     dict(type='LoadImageFromFile'),
@@ -23,6 +23,6 @@ train_dataloader = dict(
     dataset=dict(
         type=dataset_type,
         data_root=data_root,
-        ann_file='meta/train.txt',
-        data_prefix=dict(img_path='train/'),
+        ann_file='',
+        data_prefix='',
         pipeline=train_pipeline))
