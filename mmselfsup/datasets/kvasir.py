@@ -5,7 +5,7 @@ from mmcls.datasets import BaseDataset
 
 
 @DATASETS.register_module()
-class Kvasir(CustomDataset):
+class Kvasir(BaseDataset):
 
     IMG_EXTENSIONS = ('.jpg', '.jpeg', '.png', '.ppm', '.bmp', '.pgm', '.tif')
 
@@ -20,7 +20,7 @@ class Kvasir(CustomDataset):
             ann_file=ann_file,
             metainfo=metainfo,
             data_root=data_root,
-            data_prefix=data_prefix
+            data_prefix=data_prefix,
             **kwargs)
 
     def load_data_list(self) -> List[dict]:
