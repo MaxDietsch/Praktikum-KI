@@ -5,7 +5,7 @@ from mmcls.datasets import BaseDataset
 
 
 @DATASETS.register_module()
-class Kvasir(CustomDataset):
+class Kvasir(BaseDataset):
 
     IMG_EXTENSIONS = ('.jpg', '.jpeg', '.png', '.ppm', '.bmp', '.pgm', '.tif')
 
@@ -15,13 +15,13 @@ class Kvasir(CustomDataset):
                  data_root: str = '',
                  data_prefix: Union[str, dict] = '',
                  **kwargs) -> None:
-        kwargs = {'extensions': self.IMG_EXTENSIONS, **kwargs}
+        #kwargs = {'extensions': self.IMG_EXTENSIONS, **kwargs}
         super().__init__(
             ann_file=ann_file,
             metainfo=metainfo,
             data_root=data_root,
-            data_prefix=data_prefix,
-            **kwargs)
+            data_prefix=data_prefix)
+            #**kwargs)
 
     def load_data_list(self) -> List[dict]:
         assert isinstance(self.ann_file, str)
