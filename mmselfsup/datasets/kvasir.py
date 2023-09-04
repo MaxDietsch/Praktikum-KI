@@ -30,7 +30,7 @@ class Kvasir(BaseDataset):
             samples = [x.strip().split(' ') for x in f.readlines()]
             for filename, gt_label in samples:
                 #img_path = add_prefix(filename, self.img_prefix)
-                print(self.img_prefix)
+                img_path = self.img_prefix + "/" + filename
                 info = {'img_path': img_path, 'gt_label': int(gt_label)}
                 data_list.append(info)
         return data_list
