@@ -5,7 +5,7 @@ from mmcls.datasets import BaseDataset
 
 
 @DATASETS.register_module()
-class Kvasir(BaseDataset):
+class Kvasir(CustomDataset):
 
     IMG_EXTENSIONS = ('.jpg', '.jpeg', '.png', '.ppm', '.bmp', '.pgm', '.tif')
 
