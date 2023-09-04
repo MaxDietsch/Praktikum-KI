@@ -14,8 +14,8 @@ train_pipeline = [
     dict(type='LoadImageFromFile'),
     dict(type='RandomResizedCrop', scale=224, backend='pillow'),
     dict(type='RandomFlip', prob=0.5, direction='horizontal'),
-    dict(type='PackClsInputs'),
-    #dict(type='PackSelfSupInputs'),
+    #dict(type='PackClsInputs'),
+    dict(type='PackSelfSupInputs'),
 ]
 test_pipeline = [
     dict(type='LoadImageFromFile'),
