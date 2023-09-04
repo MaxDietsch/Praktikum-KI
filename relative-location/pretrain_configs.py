@@ -1,7 +1,7 @@
 _base_ = [
     './pretrain_model.py', 
     './pretrain_data.py',
-    './schedule.py',
+    './pretrain_schedule.py',
     './runtime.py'
 ]
 
