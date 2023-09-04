@@ -1,5 +1,5 @@
 # dataset settings
-dataset_type = 'mmcls.CutstomDataset'
+dataset_type = 'Kvasir'
 data_root = '../data_dir/kvasir/'
 data_preprocessor = dict(
     num_classes=3,

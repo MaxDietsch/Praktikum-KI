@@ -9,3 +9,5 @@ param_scheduler = [
 
 # runtime settings
 train_cfg = dict(type='EpochBasedTrainLoop', max_epochs=10)
+val_cfg = dict()
+test_cfg = dict()

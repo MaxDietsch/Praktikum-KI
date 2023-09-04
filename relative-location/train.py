@@ -3,7 +3,7 @@ from mmengine.runner import Runner
 
 benchmark_cfg = Config.fromfile('configs.py')
 
-checkpoint_file = 'work_dirs/selfsup/relative-loc_resnet50_8xb64-steplr-70e_in1k_colab/relative-loc_backbone-weights.pth'
+checkpoint_file = './work_dirs/selfsup/relative-loc_resnet50_8xb64-steplr-70e_in1k_colab/relative-loc_backbone-weights.pth'
 
 benchmark_cfg.model.backbone.frozen_stages=4
 benchmark_cfg.model.backbone.init_cfg = dict(type='Pretrained', checkpoint=checkpoint_file)
