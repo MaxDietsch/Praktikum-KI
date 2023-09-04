@@ -14,13 +14,14 @@ train_pipeline = [
     dict(type='LoadImageFromFile'),
     dict(type='RandomResizedCrop', scale=224, backend='pillow'),
     dict(type='RandomFlip', prob=0.5, direction='horizontal'),
-    dict(type='PackClsInputs'),
+    #dict(type='PackClsInputs'),
+    dict(type='PackSelfSupInputs'),
 ]
 test_pipeline = [
     dict(type='LoadImageFromFile'),
     dict(type='ResizeEdge', scale=256, edge='short', backend='pillow'),
     dict(type='CenterCrop', crop_size=224),
-    dict(type='PackClsInputs'),
+    dict(type='PackSelfSupInputs'),
 ]
 
 train_dataloader = dict(
