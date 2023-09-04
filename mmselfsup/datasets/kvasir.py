@@ -33,5 +33,6 @@ class Kvasir(BaseDataset):
                 img_path = self.img_prefix + "/" + filename
                 info = {'img_path': img_path, 'gt_label': int(gt_label)}
                 data_list.append(info)
+        print(data_list)
         return data_list
 
