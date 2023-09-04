@@ -3,7 +3,7 @@ from mmcls.datasets import CustomDataset
 from mmselfsup.registry import DATASETS
 from mmcls.datasets import BaseDataset
 from PIL import Image
-import torchvision.transforms as transform
+import torchvision.transforms as transforms
 
 @DATASETS.register_module()
 class Kvasir(BaseDataset):
