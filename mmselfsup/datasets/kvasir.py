@@ -1,10 +1,11 @@
 from typing import List, Optional, Union
 from mmcls.datasets import CustomDataset
 from mmselfsup.registry import DATASETS
+from .base_dataset import BaseDataset
 
 
 @DATASETS.register_module()
-class Kvasir(CustomDataset):
+class Kvasir(BaseDataset):
 
     IMG_EXTENSIONS = ('.jpg', '.jpeg', '.png', '.ppm', '.bmp', '.pgm', '.tif')
 
@@ -23,30 +24,13 @@ class Kvasir(CustomDataset):
             **kwargs)
 
     def load_data_list(self) -> List[dict]:
-        # Rewrite load_data_list() to satisfy your specific requirement.
-        # The returned data_list could include any information you need from
-        # data or transforms.
-
-        # writing your code here
-        """Rewrite load_data_list() function for supporting annotation files
-        with unlabeled data.
-
-        Returns:
-            List[dict]: A list of data information.
-        """
-        assert self.ann_file != ''
-        with open(self.ann_file, 'r') as f:
-            self.samples = f.readlines()
-        self.has_labels = len(self.samples[0].split()) == 2
-
+        assert isinstance(self.ann_file, str)
         data_list = []
-        for sample in self.samples:
-            info = {'img_prefix': self.img_prefix}
-            sample = sample.split()
-            info['img_path'] = join_path(self.img_prefix, sample[0])
-            info['img_info'] = {'filename': sample[0]}
-            labels = sample[1] if self.has_labels else -1
-            info['gt_label'] = np.array(labels, dtype=np.int64)
-            data_list.append(info)
+        with open(self.ann_file) as f:
+            samples = [x.strip().split(' ') for x in f.readlines()]
+            for filename, gt_label in samples:
+                img_path = add_prefix(filename, self.img_prefix)
+                info = {'img_path': img_path, 'gt_label': int(gt_label)}
+                data_list.append(info)
         return data_list
 
