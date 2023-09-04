@@ -2,6 +2,7 @@ from typing import List, Optional, Union
 from mmcls.datasets import CustomDataset
 from mmselfsup.registry import DATASETS
 from mmengine.fileio import join_path
+import numpy as np
 
 @DATASETS.register_module()
 class Kvasir(CustomDataset):
