@@ -1,7 +1,7 @@
 from typing import List, Optional, Union
 from mmcls.datasets import CustomDataset
 from mmselfsup.registry import DATASETS
-from .base_dataset import BaseDataset
+from mmpretrain.datasets.base_dataset import BaseDataset
 
 
 @DATASETS.register_module()
