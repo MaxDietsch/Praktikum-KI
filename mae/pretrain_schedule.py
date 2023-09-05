@@ -13,8 +13,6 @@ optim_wrapper = dict(
             'cls_token': dict(decay_mult=0.)
         }))
 
-
-
 # learning rate scheduler
 param_scheduler = [
     dict(
