@@ -8,6 +8,7 @@ import numpy as np
 class Kvasir(CustomDataset):
 
     IMG_EXTENSIONS = ('.jpg', '.jpeg', '.png', '.ppm', '.bmp', '.pgm', '.tif')
+    CLASSES = ["polyp", "normal-pylorus", "esophagitis"]
 
     def __init__(self,
                  ann_file: str = '',
@@ -36,7 +37,7 @@ class Kvasir(CustomDataset):
             info['img_path'] = join_path(self.img_prefix, sample[0])
             info['img_info'] = {'filename': sample[0]}
             labels = sample[1] if self.has_labels else -1
-            info['gt_label'] = np.array(labels, dtype=np.int64)
+            info['gt_label'] = np.array(labels, dtype=np.int8)
             data_list.append(info)
         return data_list
 
