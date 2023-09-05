@@ -7,7 +7,7 @@ model = dict(
         std=[81.42, 61.04, 58.85],
         to_rgb=True
         ),
-    backbone=dict(type='VisionTransformer', arch='b', patch_size=16),
+    backbone=dict(type='mmcls.VisionTransformer', arch='b', patch_size=16),
     neck=None,
     head=dict(
         type='mmcls.LinearClsHead',
