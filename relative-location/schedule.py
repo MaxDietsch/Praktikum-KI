@@ -4,10 +4,10 @@ optim_wrapper = dict(type='OptimWrapper', optimizer=optimizer)
 
 # learning rate scheduler
 param_scheduler = [
-    dict(type='MultiStepLR', by_epoch=True, milestones=[3, 6], gamma=0.1)
+    dict(type='MultiStepLR', by_epoch=True, milestones=[7, 15], gamma=0.1)
 ]
 
 # runtime settings
-train_cfg = dict(type='EpochBasedTrainLoop', max_epochs=10)
+train_cfg = dict(type='EpochBasedTrainLoop', max_epochs=20)
 val_cfg = dict()
 test_cfg = dict()
