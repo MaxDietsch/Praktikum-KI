@@ -122,7 +122,7 @@ class LinearVisionTransformer(MMCls_VisionTransformer):
                  layer_cfgs=dict(),
                  output_vithead=False,
                  init_cfg=None):
-        super(MedFMC_VisionTransformer, self).__init__(
+        super(LinearVisionTransformer, self).__init__(
             arch=arch,
             img_size=img_size,
             patch_size=patch_size,
