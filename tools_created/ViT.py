@@ -6,7 +6,7 @@ from typing import Sequence
 
 
 @BACKBONES.register_module()
-class Linear_VisionTransformer(MMCls_VisionTransformer):
+class LinearVisionTransformer(MMCls_VisionTransformer):
     """Vision Transformer. The only modification is output
     content. If decoder head is MultiLabelLinearClsHead or LinearClsHead, the
     final output should be cls_token.
