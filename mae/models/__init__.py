@@ -1,5 +1,3 @@
-from .prompt_swin import PromptedSwinTransformer
-from .prompt_vit import PromptedVisionTransformer
-from .vision_transformer import MedFMC_VisionTransformer
+from .ViT import LinearVisionTransformer
 
 __all__ = ['LinearVisionTransformer']
