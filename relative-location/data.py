@@ -12,7 +12,7 @@ data_preprocessor = dict(
 
 train_pipeline = [
     dict(type='LoadImageFromFile'),
-    dict(type='RandomResizedCrop', scale=224, backend='pillow'),
+    dict(type='RandomResizedCrop', size=(1280, 1024), scale=224, backend='pillow'),
     dict(type='RandomFlip', prob=0.5, direction='horizontal'),
     dict(type='mmcls.PackClsInputs'),
 ]
