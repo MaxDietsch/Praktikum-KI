@@ -5,7 +5,7 @@ model = dict(
         num_classes = 3,
         mean=[141.46, 95.78, 85.52],
         std=[81.42, 61.04, 58.85],
-        bgr_to_rgb=True
+        to_rgb=True
         ),
     backbone=dict(type='VisionTransformer', arch='b', patch_size=16),
     neck=None,
