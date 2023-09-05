@@ -1,1 +1,1 @@
-custom_imports = dict(imports=['models'], allow_failed_imports=False)
+custom_imports = dict(imports=['autofs.stud.dietsch.Praktikum-KI.mae.models'], allow_failed_imports=False)
