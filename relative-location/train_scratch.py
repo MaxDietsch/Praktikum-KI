@@ -5,12 +5,7 @@ import os
 
 benchmark_cfg = Config.fromfile('configs.py')
 
-checkpoint_file = './work_dirs/selfsup/resnet50/resnet_backbone-weights.pth'
-
-benchmark_cfg.model.backbone.frozen_stages=0
-benchmark_cfg.model.backbone.init_cfg = dict(type='Pretrained', checkpoint=checkpoint_file)
-
-benchmark_cfg.work_dir = './work_dirs/train/kvasir/resnet50'
+benchmark_cfg.work_dir = './work_dirs/train_scratch/resnet50'
 
 benchmark_cfg.randomness = dict(seed=0, deterministic=True)
 
