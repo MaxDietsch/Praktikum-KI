@@ -1,12 +1,7 @@
 # optimizer wrapper
 optimizer = dict(type='SGD', lr=0.1, momentum=0.9, weight_decay=1e-4)
-optim_wrapper = dict(
-    type='OptimWrapper',
-    optimizer=optimizer,
-    paramwise_cfg=dict(custom_keys={
-        'neck': dict(decay_mult=5.0),
-        'head': dict(decay_mult=5.0)
-    }))
+optim_wrapper = dict(type='AmpOptimWrapper', loss_scale='dynamic')
+
 
 
 # learning rate scheduler
