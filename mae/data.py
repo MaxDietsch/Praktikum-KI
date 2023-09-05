@@ -1,5 +1,5 @@
 # dataset settings
-dataset_type = 'mmcls.CustomDataset'
+dataset_type = 'Kvasir'
 data_root = '../data_dir/kvasir/'
 
 train_pipeline = [
