@@ -9,11 +9,23 @@ model = dict(
         ),
     backbone=dict(type='mmcls.VisionTransformer', arch='s', patch_size=16),
     #neck=dict(type='LinearNeck', in_channels = 2304, out_channels = 500),
-    neck=dict(type='mmcls.GlobalAveragePooling'),
+    #neck=dict(type='mmcls.GlobalAveragePooling'),
+    head=dict(
+        type='MultiLabelLinearClsHead',
+        num_classes=3,
+        in_channels=768,
+        loss=dict(
+            type='CrossEntropyLoss',
+            use_sigmoid=True,
+            reduction='mean',
+            loss_weight=1.0),
+    ))
+
+"""
     head=dict(
         type='mmcls.LinearClsHead',
         num_classes=3,
         in_channels=500,
         loss=dict(type='mmcls.CrossEntropyLoss', loss_weight=1.0),
         topk=(1, 1),
-    ))
+    ))"""
