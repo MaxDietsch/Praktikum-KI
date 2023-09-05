@@ -5,7 +5,7 @@ model = dict(
         mean=[141.46, 95.78, 85.52],
         std=[81.42, 61.04, 58.85],
         bgr_to_rgb=True),
-    backbone=dict(type='MAEViT', arch='b', patch_size=16, mask_ratio=0.75),
+    backbone=dict(type='MAEViT', arch='s', patch_size=16, mask_ratio=0.75),
     neck=dict(
         type='MAEPretrainDecoder',
         patch_size=16,
