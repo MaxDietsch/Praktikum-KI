@@ -12,7 +12,7 @@ model = dict(
     head=dict(
         type='mmcls.LinearClsHead',
         num_classes=3,
-        in_channels=3072,
+        in_channels=768,
         loss=dict(type='mmcls.CrossEntropyLoss', loss_weight=1.0),
         topk=(1, 1),
     ))
