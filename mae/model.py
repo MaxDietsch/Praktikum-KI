@@ -7,8 +7,8 @@ model = dict(
         std=[81.42, 61.04, 58.85],
         to_rgb=True
         ),
-    backbone=dict(type='mmcls.VisionTransformer', arch='s', patch_size=16),
-    #neck=dict(type='LinearNeck', in_channels = 2304, out_channels = 500),
+    backbone=dict(type='Linear_VisionTransformer', arch='s', patch_size=16),
+    neck=dict(type='LinearNeck', in_channels = 2304, out_channels = 500),
     #neck=dict(type='mmcls.GlobalAveragePooling'),
     head=dict(
         type='mmcls.MultiLabelLinearClsHead',
