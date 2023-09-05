@@ -24,8 +24,9 @@ train_dataloader = dict(
         type=dataset_type,
         data_root=data_root,
         ann_file='meta/train.txt',
-        data_prefix=dict(img_path='train/'),
-        pipeline=train_pipeline))
+        data_prefix='train',
+        pipeline=train_pipeline)
+)
 
 
 val_dataloader = dict(
@@ -38,8 +39,9 @@ val_dataloader = dict(
         type=dataset_type,
         data_root=data_root,
         ann_file='meta/val.txt',
-        data_prefix=dict(img_path='train/'),
-        pipeline=train_pipeline))
+        data_prefix='val',
+        pipeline=test_pipeline)
+)
 
 
 val_evaluator = dict(type='mmcls.Accuracy', topk=(1, 1))

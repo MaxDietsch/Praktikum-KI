@@ -8,11 +8,11 @@ model = dict(
         to_rgb=True
         ),
     backbone=dict(type='mmcls.VisionTransformer', arch='s', patch_size=16),
-    neck=None,
+    neck=dict(type='LinearNeck', in_channels = 2304, out_channels = 500),
     head=dict(
         type='mmcls.LinearClsHead',
         num_classes=3,
-        in_channels=2304,
+        in_channels=500,
         loss=dict(type='mmcls.CrossEntropyLoss', loss_weight=1.0),
         topk=(1, 1),
     ))
