@@ -11,7 +11,7 @@ model = dict(
     #neck=dict(type='LinearNeck', in_channels = 2304, out_channels = 500),
     #neck=dict(type='mmcls.GlobalAveragePooling'),
     head=dict(
-        type='MultiLabelLinearClsHead',
+        type='mmcls.MultiLabelLinearClsHead',
         num_classes=3,
         in_channels=768,
         loss=dict(
