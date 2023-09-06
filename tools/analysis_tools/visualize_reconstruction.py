@@ -140,6 +140,7 @@ def main():
     vis_pipeline = Compose(model.cfg.test_dataloader.dataset.pipeline)
     data = dict(img_path=args.img_path)
     data = vis_pipeline(data)
+    print(data)
     data = default_collate([data])
     img, _ = model.data_preprocessor(data, False)
 
