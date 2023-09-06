@@ -3,7 +3,7 @@ model = dict(
     data_preprocessor=dict(
         num_classes=3,
         mean=[141.46, 95.78, 85.52],
-        std=[81.42, 61.04, 58.85],
+        std=[81.4, 61.04, 58.85],
         to_rgb=True,
     ),
     backbone=dict(
