@@ -51,6 +51,7 @@ class MAE(BaseModel):
         mean = kwargs['mean']
         std = kwargs['std']
         features = features * std + mean
+        features.cpu()
 
         pred = self.head.unpatchify(features)
         pred = torch.einsum('nchw->nhwc', pred).detach().cpu()
