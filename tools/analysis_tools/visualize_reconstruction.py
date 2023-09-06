@@ -142,6 +142,7 @@ def main():
     data = vis_pipeline(data)
     print(data)
     data = default_collate([data])
+    print(data)
     img, _ = model.data_preprocessor(data, False)
 
     if args.norm_pix:
