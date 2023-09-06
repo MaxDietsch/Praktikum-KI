@@ -143,7 +143,7 @@ def main():
     data = default_collate([data])
     img, _ = model.data_preprocessor(data, False)
 
-    if True:
+    if args.norm_pix:
         # for MAE reconstruction
         img_embedding = model.head.patchify(img[0])
         # normalize the target image
