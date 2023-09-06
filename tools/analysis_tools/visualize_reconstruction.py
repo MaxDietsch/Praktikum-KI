@@ -143,7 +143,7 @@ def main():
     print(data)
     data = default_collate([data])
     print(data)
-    img, _ = model.data_preprocessor(data, False)
+    img, _ = data #model.data_preprocessor(data, False)
 
     if args.norm_pix:
         # for MAE reconstruction
