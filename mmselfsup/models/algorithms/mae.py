@@ -52,6 +52,8 @@ class MAE(BaseModel):
         std = kwargs['std']
         std = torch.tensor(std).to(features.device)
         mean = torch.tensor(mean).to(features.device)
+        print(std)
+        print(mean)
 
         features = features * std + mean
         features.cpu()
