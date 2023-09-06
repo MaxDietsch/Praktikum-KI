@@ -50,13 +50,8 @@ class MAE(BaseModel):
         """
         mean = kwargs['mean']
         std = kwargs['std']
-        std = torch.tensor(std).to(features.device)
-        mean = torch.tensor(mean).to(features.device)
-        print(std)
-        print(mean)
 
         features = features * std + mean
-        features.cpu()
 
         pred = self.head.unpatchify(features)
         pred = torch.einsum('nchw->nhwc', pred).detach().cpu()
