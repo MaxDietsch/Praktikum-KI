@@ -121,7 +121,6 @@ def add_plot_parser(subparsers):
         '--backend', type=str, default=None, help='backend of plt')
     parser_plt.add_argument(
         '--style', type=str, default='dark', help='style of plt')
-    parser_plt.add_argument('--out', type=str, default=None)
 
 
 def add_time_parser(subparsers):
