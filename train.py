@@ -4,7 +4,7 @@ import os.path as osp
 
 from mmengine.config import Config, DictAction
 from mmengine.runner import Runner
-
+import torch
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Train a model')
@@ -96,6 +96,8 @@ def main():
 
     # build the runner from config
     runner = Runner.from_cfg(cfg)
+    if torch.cuda.is_available():
+        os.environ['CUBLAS_WORKSPACE_CONFIG'] = ':16:8'
     # start training
     runner.train()
 
