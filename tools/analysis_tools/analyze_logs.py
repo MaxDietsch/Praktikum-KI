@@ -70,6 +70,7 @@ def plot_curve(log_dicts, args):
                 num_iters_per_epoch = log_dict[epochs[0]]['iter'][-1]
                 for epoch in epochs:
                     iters = log_dict[epoch]['iter']
+                    print(epoch)
                     if log_dict[epoch]['mode'][-1] == 'val':
                         iters = iters[:-1]
                     assert len(iters) > 0, (
