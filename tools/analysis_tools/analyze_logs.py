@@ -103,6 +103,8 @@ def add_plot_parser(subparsers):
         nargs='+',
         help='path of train log in json format')
     parser_plt.add_argument(
+        '--out', type=str, default=None, help='path to save files to')
+    parser_plt.add_argument(
         '--keys',
         type=str,
         nargs='+',
