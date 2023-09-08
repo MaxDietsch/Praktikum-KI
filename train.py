@@ -97,7 +97,7 @@ def main():
     # build the runner from config
     runner = Runner.from_cfg(cfg)
     # start training
-    #runner.train()
+    runner.train()
 
 
 if __name__ == '__main__':
