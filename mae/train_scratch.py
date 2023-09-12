@@ -8,7 +8,6 @@ benchmark_cfg = Config.fromfile('configs.py')
 benchmark_cfg.work_dir = './work_dirs/train_scratch/vit_p16'
 #benchmark_cfg.model.backbone.init_cfg = None
 #benchmark_cfg.model.head.init_cfg = None
-benchmark_cfg.model.init_cfg = dict(type='Xavier')
 
 
 benchmark_cfg.randomness = dict(seed=0, deterministic=True)
