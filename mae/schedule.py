@@ -1,6 +1,6 @@
 # optimizer wrapper
 optimizer = dict(
-    type='AdamW', lr=1.5e-4 * 4096 / 256, betas=(0.9, 0.95), weight_decay=0.05)
+    type='AdamW', lr=1.5e-3 * 4096 / 256, betas=(0.9, 0.95), weight_decay=0.05)
     #type='AdamW', lr=0, betas=(0.9, 0.95), weight_decay=0.05)
 optim_wrapper = dict(
     type='OptimWrapper',
@@ -35,7 +35,7 @@ param_scheduler = [
 
 
 # runtime settings
-train_cfg = dict(type='EpochBasedTrainLoop', max_epochs=40)
+train_cfg = dict(type='EpochBasedTrainLoop', max_epochs=10)
 val_cfg = dict()
 test_cfg = dict()
 
