@@ -1,6 +1,6 @@
 import os
 
-dir_path = './data_dir/kvasir/normal-z-line'
+dir_path = './data_dir/kvasir/normal-pylorus'
 
 
 def rename_files(dir_path):
