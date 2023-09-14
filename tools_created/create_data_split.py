@@ -30,7 +30,7 @@ if os.path.exists(val_dir):
     shutil.rmtree(val_dir)
 os.mkdir(val_dir)
 
-if not os.path.exists(test_dir):
+if os.path.exists(test_dir):
     shutil.rmtree(test_dir)
 os.mkdir(test_dir)
 
