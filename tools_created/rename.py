@@ -1,6 +1,6 @@
 import os
 
-dir_path = './data_dir/kvasir/esophagitis'
+dir_path = './data_dir/kvasir/polyps'
 
 
 def rename_files(dir_path):
