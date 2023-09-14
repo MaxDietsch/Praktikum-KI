@@ -4,28 +4,35 @@ import shutil
 classes = {
     "polyps": " 0", 
     "esophagitis": " 1",
-    "normal-pylorus": " 2"
+    "normal-pylorus": " 2",
+    "normal-cecum": " 3",
+    "normal-z-line": " 4",
+    "ulcerative-colitis": " 5"
 }
 
-meta_dir = "./data_dir/kvasir/meta"
-train_dir = "./data_dir/kvasir/train"
-val_dir = "./data_dir/kvasir/val"
-test_dir = "./data_dir/kvasir/test"
+meta_dir = "../data_dir/kvasir/meta"
+train_dir = "../data_dir/kvasir/train"
+val_dir = "../data_dir/kvasir/val"
+test_dir = "../data_dir/kvasir/test"
 train_percentage = 80
 val_percentage = 20
 test_percentage = 0
 
-if not os.path.exists(meta_dir):
-    os.mkdir(meta_dir)
+if os.path.exists(meta_dir):
+    shutil.rmtree(meta_dir)
+os.mkdir(meta_dir)
 
-if not os.path.exists(train_dir):
-    os.mkdir(train_dir)
+if os.path.exists(train_dir):
+    shutil.rmtree(train_dir)
+os.mkdir(train_dir)
 
-if not os.path.exists(val_dir):
-    os.mkdir(val_dir)
+if os.path.exists(val_dir):
+    shutil.rmtree(val_dir)
+os.mkdir(val_dir)
 
 if not os.path.exists(test_dir):
-    os.mkdir(test_dir)
+    shutil.rmtree(test_dir)
+os.mkdir(test_dir)
 
 
 train_files, val_files, test_files = [], [], []
