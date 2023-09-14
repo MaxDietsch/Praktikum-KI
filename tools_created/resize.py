@@ -15,6 +15,6 @@ def resize_images(src_dir, dst_dir, target_size):
             # Save the resized image to the destination directory
             img_resized.save(os.path.join(dst_dir, img_name))
 
-src_directory = '../data_dir/kvasir/val'
-dst_directory = '../data_dir/kvasir/val'
+src_directory = '../data_dir/kvasir/train'
+dst_directory = '../data_dir/kvasir/train'
 resize_images(src_directory, dst_directory, target_size=(1280, 1024))
