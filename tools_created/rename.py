@@ -1,6 +1,6 @@
 import os
 
-dir_path = '../kvasir/normal-cecum'
+dir_path = '../kvasir/polyps'
 
 
 def rename_files(dir_path):
