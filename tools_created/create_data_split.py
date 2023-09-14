@@ -10,10 +10,10 @@ classes = {
     "ulcerative-colitis": " 5"
 }
 
-meta_dir = "../data_dir/kvasir/meta"
-train_dir = "../data_dir/kvasir/train"
-val_dir = "../data_dir/kvasir/val"
-test_dir = "../data_dir/kvasir/test"
+meta_dir = "./data_dir/kvasir/meta"
+train_dir = "./data_dir/kvasir/train"
+val_dir = "./data_dir/kvasir/val"
+test_dir = "./data_dir/kvasir/test"
 train_percentage = 80
 val_percentage = 20
 test_percentage = 0
