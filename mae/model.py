@@ -11,7 +11,7 @@ model = dict(
         type='mmcls.LinearVisionTransformer', 
         arch='s', 
         patch_size=16, 
-        frozen_stages = 8, 
+        #frozen_stages = 8, 
         init_cfg = dict(type='Xavier')
         ),
     #neck=dict(type='mmcls.GlobalAveragePooling'),

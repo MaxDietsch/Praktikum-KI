@@ -18,5 +18,8 @@ if torch.cuda.is_available():
     os.environ['CUBLAS_WORKSPACE_CONFIG'] = ':16:8'
 
 runner = Runner.from_cfg(benchmark_cfg)
+
+
+
 runner.train()
 
