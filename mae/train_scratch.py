@@ -10,7 +10,7 @@ benchmark_cfg.work_dir = './work_dirs/train_scratch/vit_p16'
 #benchmark_cfg.model.head.init_cfg = None
 
 
-benchmark_cfg.randomness = dict(seed=0, deterministic=True)
+benchmark_cfg.randomness = dict(seed=0, deterministic=False)
 
 if torch.cuda.is_available():
     os.environ['CUBLAS_WORKSPACE_CONFIG'] = ':16:8'
