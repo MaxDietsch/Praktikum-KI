@@ -4,14 +4,15 @@ data_root = '../data_dir/kvasir/'
 
 train_pipeline = [
     dict(type='LoadImageFromFile'),
-    ##resize
+    dict(type='Resize', size=500, backend='pillow', interpolation='bicubic'),
     dict(type='RandomFlip', prob=0.5),
     dict(type='mmcls.PackClsInputs'),
 ]
 
 test_pipeline = [
     dict(type='LoadImageFromFile'),
-    dict(type='mmcls.ResizeEdge', scale=256, edge='short', backend='pillow'),
+    dict(type='Resize', size=384, backend='pillow', interpolation='bicubic'),
+    #dict(type='mmcls.ResizeEdge', scale=256, edge='short', backend='pillow'),
     dict(type='mmcls.PackClsInputs'),
 ]
 
