@@ -8,7 +8,7 @@ def unzip_file(zip_filepath, dest_folder, password=None):
 
 # Usage:
 print("part 1")
-unzip_file('../../SUN/sundatabase_negative_part2.zip', './download_unzip/SUN/negative', 'pS2oU0lN2yP0')
+unzip_file('../../SUN/sundatabase_negative_part1.zip', './download_unzip/SUN/negative', 'pS2oU0lN2yP0')
 
 print("part 2")
 unzip_file('../../SUN/sundatabase_negative_part2.zip', './download_unzip/SUN/negative', 'pS2oU0lN2yP0')
