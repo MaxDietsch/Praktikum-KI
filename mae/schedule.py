@@ -18,8 +18,6 @@ optim_wrapper = dict(
 """
 # optimizer
 optimizer = dict(type='SGD', lr=0.001, momentum=0.9, weight_decay=0.0001)
-
-"""
 optim_wrapper = dict(
     type='OptimWrapper',
     optimizer=optimizer,
@@ -31,7 +29,6 @@ optim_wrapper = dict(
             'mask_token': dict(decay_mult=0.),
             'cls_token': dict(decay_mult=0.)
         }))
-"""
 
 # learning rate scheduler
 param_scheduler = [
