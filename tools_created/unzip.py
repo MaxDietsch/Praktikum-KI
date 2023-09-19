@@ -5,4 +5,4 @@ def unzip_file(zip_filepath, dest_folder):
         zip_ref.extractall(dest_folder)
 
 # Usage:
-unzip_file('../download', './download_unzip')
+unzip_file('../../SUN/sundatabase_negative_part1.zip', './download_unzip/SUN/negative')
