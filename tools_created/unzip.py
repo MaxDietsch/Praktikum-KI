@@ -24,3 +24,4 @@ unzip_file('../../SUN/sundatabase_positive_part1.zip', './download_unzip/SUN/pos
 
 print("part 6")
 unzip_file('../../SUN/sundatabase_positive_part2.zip', './download_unzip/SUN/positive', 'pS2oU0lN2yP0')
+print("finished")
