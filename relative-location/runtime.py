@@ -3,9 +3,9 @@ default_scope = 'mmselfsup'
 default_hooks = dict(
     runtime_info=dict(type='RuntimeInfoHook'),
     timer=dict(type='IterTimerHook'),
-    logger=dict(type='LoggerHook', interval=1200),
+    logger=dict(type='LoggerHook', interval=1, by_epoch = True),
     param_scheduler=dict(type='ParamSchedulerHook'),
-    checkpoint=dict(type='CheckpointHook', interval=10),
+    checkpoint=dict(type='CheckpointHook', interval= 1, max_keep_ckpts = 3),
     sampler_seed=dict(type='DistSamplerSeedHook'),
 )
 
@@ -22,6 +22,8 @@ log_processor = dict(
 vis_backends = [dict(type='LocalVisBackend')]
 visualizer = dict(
     type='SelfSupVisualizer', vis_backends=vis_backends, name='visualizer')
+
+randomness = dict(seed=0, deterministic=True)
 
 log_level = 'INFO'
 load_from = None

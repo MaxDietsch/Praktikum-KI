@@ -2,20 +2,16 @@ import os
 import shutil
 
 classes = {
-    "polyps": " 0", 
-    "esophagitis": " 1",
-    "normal-pylorus": " 2",
-    "normal-cecum": " 3",
-    "normal-z-line": " 4",
-    "ulcerative-colitis": " 5"
+    "polyp": " 0", 
+    "no-polyp": " 1"
 }
 
-meta_dir = "./data_dir/kvasir/meta"
-train_dir = "./data_dir/kvasir/train"
-val_dir = "./data_dir/kvasir/val"
-test_dir = "./data_dir/kvasir/test"
-train_percentage = 80
-val_percentage = 20
+meta_dir = "./data_dir/sun/meta"
+train_dir = "./data_dir/sun/train"
+val_dir = "./data_dir/sun/val"
+test_dir = "./data_dir/sun/test"
+train_percentage = 100
+val_percentage = 0
 test_percentage = 0
 
 if os.path.exists(meta_dir):
@@ -37,7 +33,7 @@ os.mkdir(test_dir)
 
 train_files, val_files, test_files = [], [], []
 
-dir = "./data_dir/kvasir"
+dir = "./data_dir/sun"
 dirs = os.listdir(dir)
 for directory in dirs:
     if directory == "train" or directory == "val" or directory == "test" or directory == "meta":

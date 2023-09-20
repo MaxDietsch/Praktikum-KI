@@ -10,7 +10,7 @@ model = dict(
         type='ResNet',
         depth=50,
         in_channels=3,
-        out_indices=[4],  # 0: conv-1, x: stage-x
+        out_indices=[4],  
         norm_cfg=dict(type='BN')),
     neck=dict(
         type='RelativeLocNeck',

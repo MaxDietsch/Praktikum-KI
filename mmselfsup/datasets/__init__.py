@@ -6,8 +6,9 @@ from .places205 import Places205
 from .samplers import *  # noqa: F401,F403
 from .transforms import *  # noqa: F401,F403
 from .kvasir import Kvasir
+from .sun import Sun
 
 __all__ = [
     'DATASETS', 'build_dataset', 'Places205', 'DeepClusterImageNet',
-    'ImageList', 'Kvasir',
+    'ImageList', 'Kvasir', 'Sun'
 ]
