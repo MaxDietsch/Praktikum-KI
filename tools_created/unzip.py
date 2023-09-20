@@ -26,8 +26,8 @@ print("part 8")
 unzip_file('../../SUN/sundatabase_positive_part2.zip', './download_unzip/SUN/positive', 'pS2oU0lN2yP0')
 
 print("part 1")
-unzip_file('../../LD/videos with polyps.zip', './download_unzip/LD/positive')
+unzip_file('../../LD/videos_with_polyps.zip', './download_unzip/LD/positive')
 
 print("part 2")
-unzip_file('../../LD/videos without polyps.zip', './download_unzip/LD/negative')
+unzip_file('../../LD/videos_without_polyps.zip', './download_unzip/LD/negative')
 print("finished")
