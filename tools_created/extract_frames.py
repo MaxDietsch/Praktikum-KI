@@ -41,5 +41,5 @@ if __name__ == "__main__":
 
     for file in os.listdir(video_dir):
         filepath = os.path.join(video_dir, file)
-        frame_num = extract_frames(filepath, output_directory, frame_num, file[ : -5])
+        frame_num = extract_frames(filepath, output_directory, frame_num, file[2: -5])
         break
