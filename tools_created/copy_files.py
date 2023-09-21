@@ -5,6 +5,8 @@ def copy_all_files(src_dir, dest_dir):
     # Iterate through all files in the source directory
     i = 0
     for dir in os.listdir(src_dir):
+        if dir =="annotation.txt":
+            continue
         for filename in os.listdir(os.path.join(src_dir, dir)):
             src_file_path = os.path.join(src_dir, dir, filename)
             dest_file_path = os.path.join(dest_dir, filename)
@@ -20,7 +22,7 @@ def copy_all_files(src_dir, dest_dir):
             """
 
 if __name__ == "__main__":
-    source_directory = "./download_unzip/SUN/negative"
-    destination_directory = "../data_dir/SUN/negative"
+    source_directory = "./download_unzip/SUN/positive"
+    destination_directory = "../data_dir/SUN/positive"
     
     copy_all_files(source_directory, destination_directory)
