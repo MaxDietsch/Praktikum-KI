@@ -26,10 +26,10 @@ def extract_frames(video_path, output_dir, frame_num, file):
 
         frame_num += 1
 
-        """
-        if frame_num >= 1:
+        
+        if frame_num >= 109553:
             break
-        """
+        
 
     # Release the video file when done
     cap.release()
