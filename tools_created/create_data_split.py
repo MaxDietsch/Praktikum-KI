@@ -43,17 +43,17 @@ for directory in dirs:
     i = 0
     for file in files:
         print(i)
-        if i < len(files) * train_percentage / 100:
+        if i <= len(files) * train_percentage / 100:
             i += 1
             train_files.append(file + classes[directory])
             shutil.move(os.path.join(dir, directory, file), os.path.join(train_dir, file))
             continue
-        if i < len(files) * (train_percentage + val_percentage) / 100:
+        if i <= len(files) * (train_percentage + val_percentage) / 100:
             i += 1
             val_files.append(file + classes[directory])
             shutil.move(os.path.join(dir, directory, file), os.path.join(val_dir, file))
             continue
-        if i < len(files) * (train_percentage + val_percentage + test_percentage) / 100:
+        if i <= len(files) * (train_percentage + val_percentage + test_percentage) / 100:
             i += 1
             test_files.append(file + classes[directory])
             shutil.move(os.path.join(dir, directory, file), os.path.join(test_dir, file))

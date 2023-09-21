@@ -39,7 +39,7 @@ def extract_frames(video_path, output_dir, frame_num, file):
 
 if __name__ == "__main__":
     video_dir = "./download_unzip/LD/positive/videos_with_polyps"
-    output_directory = "../data_dir/LD/positive"
+    output_directory = "../data_dir/LD/polyp"
 
     for file in os.listdir(video_dir):
         filepath = os.path.join(video_dir, file)
