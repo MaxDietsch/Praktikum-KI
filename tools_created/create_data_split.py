@@ -42,7 +42,8 @@ for directory in dirs:
     files = os.listdir(path)
     i = 0
     for file in files:
-        print(i)
+        if i % 1000 == 0:
+            print(i)
         if i <= len(files) * train_percentage / 100:
             i += 1
             train_files.append(file + classes[directory])
@@ -58,7 +59,7 @@ for directory in dirs:
             test_files.append(file + classes[directory])
             shutil.move(os.path.join(dir, directory, file), os.path.join(test_dir, file))
             continue
-    os.rmdir(path)
+    #os.rmdir(path)
 
 train_file = meta_dir + "/train.txt"
 val_file = meta_dir + "/val.txt"

@@ -20,14 +20,15 @@ def extract_frames(video_path, output_dir, frame_num, file):
             break  # Exit the loop if we're at the end of the video
 
         # Construct the output image path
-        frame_filename = os.path.join(output_dir, f"LD_positive_{file}_{frame_num}.png")
+        frame_filename = os.path.join(output_dir, f"LD_negative_{file}_{frame_num}.png")
         cv2.imwrite(frame_filename, frame)  # Save the frame as an image
-        print(frame_num)
+        if frame_num % 1000 == 0:
+            print(frame_num)
 
         frame_num += 1
 
         
-        if frame_num >= 49136:
+        if frame_num >= 109554:
             break
         
 
@@ -38,8 +39,8 @@ def extract_frames(video_path, output_dir, frame_num, file):
     return frame_num
 
 if __name__ == "__main__":
-    video_dir = "./download_unzip/LD/positive/videos_with_polyps"
-    output_directory = "../data_dir/LD/polyp"
+    video_dir = "./download_unzip/LD/negative/videos_without_polyps"
+    output_directory = "../data_dir/LD/no-polyp"
 
     for file in os.listdir(video_dir):
         filepath = os.path.join(video_dir, file)
