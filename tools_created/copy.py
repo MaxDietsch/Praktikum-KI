@@ -10,16 +10,14 @@ def copy_all_files(src_dir, dest_dir):
             dest_file_path = os.path.join(dest_dir, filename)
 
         # Check if it's a file and not a directory
-        print(src_file_path)
-        print(dest_file_path)
-        if os.path.isfile(src_file_path):
-            shutil.copy(src_file_path, dest_file_path)
-            i += 1
-            print(i)
-        """
-        if i == 1:
-            break
-        """
+            if os.path.isfile(src_file_path):
+                shutil.copy(src_file_path, dest_file_path)
+                i += 1
+                print(i)
+            """
+            if i == 1:
+                break
+            """
 
 if __name__ == "__main__":
     source_directory = "./download_unzip/SUN/negative"
