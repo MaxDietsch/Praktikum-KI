@@ -5,9 +5,7 @@ data_root = '../data_dir/LD/'
 train_pipeline = [
     dict(type='LoadImageFromFile'),
     dict(type='Resize', scale=(640, 640), interpolation='bicubic'),
-    dict(type='PackSelfSupInputs',
-        pseudo_label_keys=['patch_label'],
-        meta_keys=['img_path'])]
+    dict(type='PackSelfSupInputs', meta_keys=['img_path'])]
 
 train_dataloader = dict(
     batch_size=64,
