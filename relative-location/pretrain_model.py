@@ -12,6 +12,7 @@ model = dict(
         in_channels=3,
         out_indices=[4],  
         norm_cfg=dict(type='BN')),
+        frozen_stages = -1, 
     neck=dict(
         type='RelativeLocNeck',
         in_channels=2048,

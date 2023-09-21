@@ -6,7 +6,7 @@ train_pipeline = [
     dict(type='LoadImageFromFile'),
     dict(type='Resize', scale=(320, 320), interpolation='bicubic'),
     dict(type='RandomPatchWithLabels'),
-    dict(type='PackSelfSupInputs', meta_keys=['img_path'])]
+    dict(type='PackSelfSupInputs', pseudo_label_keys=['patch_box', 'patch_label', 'unpatched_img'], meta_keys=['img_path'])]
 
 train_dataloader = dict(
     batch_size=32,
