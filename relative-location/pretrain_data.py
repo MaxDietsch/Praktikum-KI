@@ -1,5 +1,5 @@
 # dataset settings
-dataset_type = 'Ld'
+dataset_type = 'mmcls.CustomDataset'
 data_root = '../data_dir/LD/'
 
 train_pipeline = [
