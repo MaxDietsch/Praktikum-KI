@@ -9,7 +9,7 @@ train_pipeline = [
     dict(type='PackSelfSupInputs', pseudo_label_keys=['patch_box', 'patch_label', 'unpatched_img'], meta_keys=['img_path'])]
 
 train_dataloader = dict(
-    batch_size=32,
+    batch_size=16,
     num_workers=4,
     persistent_workers=True,
     sampler=dict(type='DefaultSampler', shuffle=True),
