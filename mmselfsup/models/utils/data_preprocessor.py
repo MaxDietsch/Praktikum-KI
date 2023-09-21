@@ -84,7 +84,7 @@ class RelativeLocDataPreprocessor(SelfSupDataPreprocessor):
         """
         batch_inputs, batch_data_samples = super().forward(data, training)
         # This part is unique to Relative Loc
-        print(batch_inputs[0])
+        print(batch_inputs[1])
         img1 = torch.stack(batch_inputs[1:], 1)  # Nx8xCxHxW
         img1 = img1.view(
             img1.size(0) * img1.size(1), img1.size(2), img1.size(3),
