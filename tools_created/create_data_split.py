@@ -33,7 +33,7 @@ os.mkdir(test_dir)
 
 train_files, val_files, test_files = [], [], []
 
-dir = "../data_dir/LD/negative"
+dir = "../data_dir/LD"
 dirs = os.listdir(dir)
 for directory in dirs:
     if directory == "train" or directory == "val" or directory == "test" or directory == "meta":
