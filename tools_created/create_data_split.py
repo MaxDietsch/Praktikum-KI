@@ -6,10 +6,10 @@ classes = {
     "no-polyp": " 1"
 }
 
-meta_dir = "./data_dir/LD/meta"
-train_dir = "./data_dir/LD/train"
-val_dir = "./data_dir/LD/val"
-test_dir = "./data_dir/LD/test"
+meta_dir = "../data_dir/LD/meta"
+train_dir = "../data_dir/LD/train"
+val_dir = "../data_dir/LD/val"
+test_dir = "../data_dir/LD/test"
 train_percentage = 100
 val_percentage = 0
 test_percentage = 0
@@ -33,7 +33,7 @@ os.mkdir(test_dir)
 
 train_files, val_files, test_files = [], [], []
 
-dir = "./data_dir/SUN"
+dir = "../data_dir/LD"
 dirs = os.listdir(dir)
 for directory in dirs:
     if directory == "train" or directory == "val" or directory == "test" or directory == "meta":
