@@ -1,6 +1,6 @@
 # dataset settings
 dataset_type = 'mmcls.CustomDataset'
-data_root = '../data_dir/LD/'
+data_root = '../data_dir/kvasir/'
 
 train_pipeline = [
     dict(type='LoadImageFromFile'),
