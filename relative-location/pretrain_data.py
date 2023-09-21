@@ -1,5 +1,5 @@
 # dataset settings
-dataset_type = 'ld'
+dataset_type = 'Ld'
 data_root = '../data_dir/LD/'
 
 train_pipeline = [
