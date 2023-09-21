@@ -2,8 +2,8 @@ model = dict(
     type='mmcls.ImageClassifier',
     data_preprocessor=dict(
         num_classes=3,
-        mean=[141.46, 95.78, 85.52],
-        std=[81.4, 61.04, 58.85],
+        mean=[7.18, 4.85, 3.47],
+        std=[34.02, 22.52, 16.46],
         to_rgb=True,
     ),
     backbone=dict(
