@@ -1,6 +1,6 @@
 import os
 
-dir_path = './data_dir/kvasir/normal-pylorus'
+dir_path = './data_dir/SUN/negative'
 
 
 def rename_files(dir_path):
