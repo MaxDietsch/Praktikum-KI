@@ -42,6 +42,7 @@ for directory in dirs:
     files = os.listdir(path)
     i = 0
     for file in files:
+        print(i)
         if i < len(files) * train_percentage / 100:
             i += 1
             train_files.append(file + classes[directory])
