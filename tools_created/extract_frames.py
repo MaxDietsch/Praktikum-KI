@@ -1,7 +1,7 @@
 import cv2
 import os
 frame_num = 0
-def extract_frames(video_path, output_dir, frame_num):
+def extract_frames(video_path, output_dir, frame_num, file):
     # Ensure the output directory exists
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
@@ -20,7 +20,7 @@ def extract_frames(video_path, output_dir, frame_num):
             break  # Exit the loop if we're at the end of the video
 
         # Construct the output image path
-        frame_filename = os.path.join(output_dir, f"LD_negative_{frame_num}.png")
+        frame_filename = os.path.join(output_dir, f"LD_negative_{file}_{frame_num}.png")
         cv2.imwrite(frame_filename, frame)  # Save the frame as an image
         print(frame_num)
 
@@ -32,7 +32,7 @@ def extract_frames(video_path, output_dir, frame_num):
     # Release the video file when done
     cap.release()
 
-    print(f"Extracted {frame_num} frames to {output_dir}")
+    #print(f"Extracted {frame_num} frames to {output_dir}")
     return frame_num
 
 if __name__ == "__main__":
@@ -41,5 +41,5 @@ if __name__ == "__main__":
 
     for file in os.listdir(video_dir):
         filepath = os.path.join(video_dir, file)
-        frame_num = extract_frames(filepath, output_directory, frame_num)
+        frame_num = extract_frames(filepath, output_directory, frame_num, file[ : -5])
         break
