@@ -5,6 +5,7 @@ data_root = '../data_dir/kvasir/'
 train_pipeline = [
     dict(type='LoadImageFromFile'),
     dict(type='Resize', scale=(640, 640), interpolation='bicubic'),
+    dict(type='RandomPatchWithLabels'),
     dict(type='PackSelfSupInputs', meta_keys=['img_path'])]
 
 train_dataloader = dict(
