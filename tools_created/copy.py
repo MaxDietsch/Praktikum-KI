@@ -16,8 +16,10 @@ def copy_all_files(src_dir, dest_dir):
             shutil.copy(src_file_path, dest_file_path)
             i += 1
             print(i)
+        """
         if i == 1:
             break
+        """
 
 if __name__ == "__main__":
     source_directory = "./download_unzip/SUN/negative"
