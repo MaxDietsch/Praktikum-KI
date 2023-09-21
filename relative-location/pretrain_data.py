@@ -1,13 +1,10 @@
 # dataset settings
-dataset_type = 'sun'
-data_root = '../data_dir/sun/'
+dataset_type = 'ld'
+data_root = '../data_dir/LD/'
 
 train_pipeline = [
     dict(type='LoadImageFromFile'),
-    dict(type='Resize', scale=292),
-    dict(type='RandomCrop', size=255),
-    dict(type='RandomGrayscale', prob=0.66, keep_channels=True),
-    dict(type='RandomPatchWithLabels'),
+    dict(type='Resize', scale=(640, 640), interpolation='bicubic'),
     dict(
         type='PackSelfSupInputs',
         pseudo_label_keys=['patch_box', 'patch_label', 'unpatched_img'],
@@ -23,5 +20,6 @@ train_dataloader = dict(
     dataset=dict(
         type=dataset_type,
         data_root=data_root,
-        data_prefix='',
+        ann_file='meta/train.txt',
+        data_prefix=dict(img_path='train/'),
         pipeline=train_pipeline))

@@ -1,6 +1,6 @@
 # dataset settings
-dataset_type = 'ld'
-data_root = '../data_dir/ld/'
+dataset_type = 'sun'
+data_root = '../data_dir/SUN/'
 
 train_pipeline = [
     dict(type='LoadImageFromFile'),

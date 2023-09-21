@@ -7,8 +7,9 @@ from .samplers import *  # noqa: F401,F403
 from .transforms import *  # noqa: F401,F403
 from .kvasir import Kvasir
 from .sun import Sun
+from .ld import Ld
 
 __all__ = [
     'DATASETS', 'build_dataset', 'Places205', 'DeepClusterImageNet',
-    'ImageList', 'Kvasir', 'Sun'
+    'ImageList', 'Kvasir', 'Sun', 'Ld'
 ]
