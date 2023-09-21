@@ -4,7 +4,7 @@ data_root = '../data_dir/LD/'
 
 train_pipeline = [
     dict(type='LoadImageFromFile'),
-    dict(type='Resize', scale=(320, 320), interpolation='bicubic'),
+    dict(type='Resize', scale=(640, 640), interpolation='bicubic'),
     dict(type='RandomPatchWithLabels'),
     dict(type='PackSelfSupInputs', pseudo_label_keys=['patch_box', 'patch_label', 'unpatched_img'], meta_keys=['img_path'])]
 
