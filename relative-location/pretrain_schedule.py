@@ -14,4 +14,4 @@ param_scheduler = [dict(type='MultiStepLR', by_epoch=True, milestones=[15, 25, 3
 
 
 # runtime settings
-train_cfg = dict(type='EpochBasedTrainLoop', max_epochs=50)
+train_cfg = dict(type='EpochBasedTrainLoop', max_epochs=2)
