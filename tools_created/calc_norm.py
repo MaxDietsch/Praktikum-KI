@@ -62,5 +62,5 @@ def calc_norm(dir):
     print(f"standard deviations: r: {std_r}, g: {std_g}, b: {std_b}")
 
 
-directory = '../data_dir/LD/train'
+directory = '../data_dir/SUN/train'
 calc_norm(directory)
