@@ -2,8 +2,8 @@ import os
 import shutil
 
 classes = {
-    "polyp": " 0", 
-    "no-polyp": " 1"
+    "positive": " 0", 
+    "negative": " 1"
 }
 
 meta_dir = "../data_dir/SUN/meta"
