@@ -1,5 +1,5 @@
 # dataset settings
-dataset_type = 'sun'
+dataset_type = 'Sun'
 data_root = '../data_dir/SUN/'
 
 train_pipeline = [
@@ -15,7 +15,7 @@ test_pipeline = [
 ]
 
 train_dataloader = dict(
-    batch_size=2,
+    batch_size=16,
     num_workers=4,
     dataset=dict(
         type=dataset_type,
@@ -30,7 +30,7 @@ train_dataloader = dict(
 )
 
 val_dataloader = dict(
-    batch_size=2,
+    batch_size=16,
     num_workers=4,
     dataset=dict(
         type=dataset_type,
