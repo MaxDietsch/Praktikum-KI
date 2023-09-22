@@ -3,7 +3,7 @@ default_scope = 'mmselfsup'
 default_hooks = dict(
     runtime_info=dict(type='RuntimeInfoHook'),
     timer=dict(type='IterTimerHook'),
-    logger=dict(type='LoggerHook', interval=1000),
+    logger=dict(type='LoggerHook', interval=80),
     param_scheduler=dict(type='ParamSchedulerHook'),
     checkpoint=dict(type='CheckpointHook', interval= 1, max_keep_ckpts = 3),
     sampler_seed=dict(type='DistSamplerSeedHook'),
