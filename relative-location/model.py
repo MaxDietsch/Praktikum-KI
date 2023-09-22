@@ -11,12 +11,11 @@ model = dict(
         depth=50,
         in_channels=3,
         out_indices=[4],  
-        norm_cfg=dict(type='BN'),
-        frozen_stages=-1),
+        norm_cfg=dict(type='BN')),
     #neck=dict(type='mmcls.GlobalAveragePooling'),
     neck=dict(
         type='RelativeLocNeck',
-        in_channels=2048,
+        in_channels=4096,
         out_channels=1024,
         with_avg_pool=True),
     head=dict(
