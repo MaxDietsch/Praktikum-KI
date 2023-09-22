@@ -1,6 +1,6 @@
 _base_ = [
-    '../_base_/pretrain_model.py',
-    '../_base_/pretrain_data.py',
-    '../_base_/pretrain_schedule.py',
-    '../_base_/runtime.py',
+    './pretrain_model.py',
+    './pretrain_data.py',
+    './pretrain_schedule.py',
+    './runtime.py',
 ]
