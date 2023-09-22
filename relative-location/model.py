@@ -13,11 +13,16 @@ model = dict(
         num_stages=4,
         norm_cfg=dict(type='BN'),
         frozen_stages=-1),
-    neck=dict(type='mmcls.GlobalAveragePooling'),
+    #neck=dict(type='mmcls.GlobalAveragePooling'),
+    neck=dict(
+        type='RelativeLocNeck',
+        in_channels=2048,
+        out_channels=1024,
+        with_avg_pool=True),
     head=dict(
         type='mmcls.LinearClsHead',
         num_classes=2,
-        in_channels=2048,
+        in_channels=1024,
         loss=dict(type='mmcls.CrossEntropyLoss', loss_weight=1.0),
         topk=(1, 1),
     ))
