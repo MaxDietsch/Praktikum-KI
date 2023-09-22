@@ -10,13 +10,13 @@ model = dict(
         type='ResNet',
         depth=50,
         in_channels=3,
-        num_stages=4,
+        out_indices=[4],  
         norm_cfg=dict(type='BN'),
         frozen_stages=-1),
     #neck=dict(type='mmcls.GlobalAveragePooling'),
     neck=dict(
         type='RelativeLocNeck',
-        in_channels=4096,
+        in_channels=2048,
         out_channels=1024,
         with_avg_pool=True),
     head=dict(
