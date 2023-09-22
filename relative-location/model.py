@@ -15,7 +15,7 @@ model = dict(
     #neck=dict(type='mmcls.GlobalAveragePooling'),
     neck=dict(
         type='RelativeLocNeck',
-        in_channels=4096,
+        in_channels=1024,
         out_channels=1024,
         with_avg_pool=True),
     head=dict(
