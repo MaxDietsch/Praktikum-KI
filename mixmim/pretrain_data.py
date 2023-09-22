@@ -8,7 +8,7 @@ train_pipeline = [
     dict(type='PackSelfSupInputs', meta_keys=['img_path'])]
 
 train_dataloader = dict(
-    batch_size=128,
+    batch_size=16,
     num_workers=32,
     persistent_workers=True,
     pin_memory=True,
