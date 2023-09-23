@@ -11,7 +11,7 @@ model = dict(
         in_channels=3,
         out_indices=[4],  # 0: conv-1, x: stage-x
         norm_cfg=dict(type='BN'),
-        zero_init_residual=True,
+        #zero_init_residual=True,
         init_cfg = dict(type='Xavier')),
     neck=dict(
         type='NonLinearNeck',
