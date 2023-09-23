@@ -1,6 +1,6 @@
 # model settings
 model = dict(
-    type='SimSiam',
+    type='mmcls.ImageClassifier',
     data_preprocessor=dict(
         num_classes = 3, 
         mean=[22.58, 12.83, 9.29],
