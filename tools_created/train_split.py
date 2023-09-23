@@ -20,6 +20,7 @@ def create_split(directory, percentage):
                 print(f'{i} files copied')
             file, cls = line.split()
             shutil.copy(os.path.join(directory, 'train', file), directory + f'train{str(percentage * 100)}%')
+            print(directory + f'train{str(percentage * 100)}%')
             trainfile.write(line + '\n')
 
 
