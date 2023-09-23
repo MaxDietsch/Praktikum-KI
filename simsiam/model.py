@@ -10,7 +10,7 @@ model = dict(
         depth=50,
         in_channels=3,
         out_indices=[4],  # 0: conv-1, x: stage-x
-        norm_cfg=dict(type='SyncBN'),
+        #norm_cfg=dict(type='SyncBN'),
         zero_init_residual=True,
         init_cfg = dict(type='Xavier')),
     neck=dict(
