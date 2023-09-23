@@ -2,16 +2,17 @@
 model = dict(
     type='SimSiam',
     data_preprocessor=dict(
+        num_classes = 3, 
         mean=[22.58, 12.83, 9.29],
         std=[55.03, 34.93, 25.90],
-        bgr_to_rgb=True),
+        to_rgb=True),
     backbone=dict(
         type='ResNet',
         depth=50,
         in_channels=3,
         out_indices=[4],  # 0: conv-1, x: stage-x
         norm_cfg=dict(type='BN'),
-        #zero_init_residual=True,
+        zero_init_residual=True,
         init_cfg = dict(type='Xavier')),
     neck=dict(
         type='NonLinearNeck',
