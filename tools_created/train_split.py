@@ -6,6 +6,10 @@ import tqdm
 def create_split(directory, percentage):
     filename = os.path.join(directory, 'meta/train.txt')
 
+    if os.path.exists(directory + f'/train{str(percentage * 100)}%'):
+        shutil.rmtree(directory + f'/train{str(percentage * 100)}%')
+    os.mkdir(directory + f'/train{str(percentage * 100)}%')
+
     lines = []
     with open(filename, "r") as f:
         for line in f:
