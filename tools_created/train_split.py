@@ -25,7 +25,7 @@ def create_split(directory, percentage):
 
 if __name__ == "__main__":
     directory = "../data_dir/SUN"
-    percentage = 0.5
+    percentage = 0.2
     create_split(directory, percentage)
 
 
