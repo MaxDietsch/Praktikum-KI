@@ -20,8 +20,8 @@ train_dataloader = dict(
     dataset=dict(
         type=dataset_type,
         data_root=data_root,
-        ann_file='meta/train50.0%.txt',
-        data_prefix='train50.0%',
+        ann_file='meta/train25.0%.txt',
+        data_prefix='train25.0%',
         pipeline=train_pipeline),
     sampler=dict(type='DefaultSampler', shuffle=True),
     collate_fn=dict(type='default_collate'),
