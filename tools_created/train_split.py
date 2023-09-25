@@ -8,8 +8,8 @@ def create_split(directory, percentage):
 
     if os.path.exists(directory + f'/train{str(percentage * 100)}%'):
         shutil.rmtree(directory + f'/train{str(percentage * 100)}%')
-    #os.mkdir(directory + f'/train{str(percentage * 100)}%')
-    os.mkdir(directory + f'/train5000')
+    os.mkdir(directory + f'/train{str(percentage * 100)}%')
+    #os.mkdir(directory + f'/train5000')
 
 
     lines = []
@@ -18,15 +18,15 @@ def create_split(directory, percentage):
             if random.random() < percentage:
                 lines.append(line.strip())
     
-    #train_file = os.path.join(directory, 'meta', f'train{str(percentage * 100)}%.txt')
-    train_file = os.path.join(directory, 'meta', f'train5000.txt')
+    train_file = os.path.join(directory, 'meta', f'train{str(percentage * 100)}%.txt')
+    #train_file = os.path.join(directory, 'meta', f'train5000.txt')
 
 
     with open(train_file, "w") as trainfile:
         for i, line in tqdm.tqdm(enumerate(lines)):
             file, cls = line.split()
-            #shutil.copy(os.path.join(directory, 'train', file), directory + f'/train{str(percentage * 100)}%')
-            shutil.copy(os.path.join(directory, 'train', file), directory + f'/train5000')
+            shutil.copy(os.path.join(directory, 'train', file), directory + f'/train{str(percentage * 100)}%')
+            #shutil.copy(os.path.join(directory, 'train', file), directory + f'/train5000')
             trainfile.write(line + '\n')
 
 
