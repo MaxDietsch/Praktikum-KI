@@ -6,7 +6,7 @@ model = dict(
         bgr_to_rgb=True),
     backbone=dict(
         type='MixMIMTransformerPretrain',
-        arch='b',
+        arch='B',
         drop_rate=0.0,
         drop_path_rate=0.0, 
     ),
