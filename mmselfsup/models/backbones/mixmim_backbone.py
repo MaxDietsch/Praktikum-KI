@@ -182,6 +182,8 @@ class MixMIMTransformerPretrain(MixMIMTransformer):
         x, _ = self.patch_embed(x)
 
         x = x * (1. - mask_s1) + x.flip(0) * mask_s1
+        print(x.shape)
+        print(self.absolute_pos_embed.shape)
         x = x + self.absolute_pos_embed
         x = self.drop_after_pos(x)
 
