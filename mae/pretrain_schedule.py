@@ -15,7 +15,7 @@ optim_wrapper = dict(
         }))
 """
 
-optimizer = dict(type='SGD', lr=0.007, momentum=0.9, weight_decay=0.0001)
+optimizer = dict(type='SGD', lr=0.001, momentum=0.9, weight_decay=0.0001)
 optim_wrapper = dict(
     type='OptimWrapper',
     optimizer=optimizer,
