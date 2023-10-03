@@ -13,6 +13,9 @@ optim_wrapper = dict(
             'cls_token': dict(decay_mult=0.)
         }))
 
+param_scheduler = [
+    dict(type='MultiStepLR', by_epoch=True, milestones=[7, 15], gamma=0.1)
+]
 
 # runtime settings
 train_cfg = dict(type='EpochBasedTrainLoop', max_epochs=20)
