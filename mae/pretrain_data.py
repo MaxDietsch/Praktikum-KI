@@ -4,7 +4,7 @@ data_root = '../data_dir/LD/'
 
 train_pipeline = [
     dict(type='LoadImageFromFile'),
-    dict(type='Resize', scale=(640, 640), interpolation='bicubic'),
+    dict(type='Resize', scale=(224, 224), interpolation='bicubic'),
     dict(type='PackSelfSupInputs', meta_keys=['img_path'])
 ]
 
