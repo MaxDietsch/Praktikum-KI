@@ -9,7 +9,7 @@ def check_ratio(filename, size):
     with open(filename, "r") as f:
         for line in f:
             file, cls = line.split()
-            if cls == 0:
+            if cls == "0":
                 idx += 1
     return idx 
 
