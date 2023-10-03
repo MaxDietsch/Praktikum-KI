@@ -140,7 +140,7 @@ class MAEPretrainDecoder(BaseModule):
 
         # add pos embed
         print(x.shape)
-        print(self.decoder_pos_embed)
+        print(self.decoder_pos_embed.shape)
         x = x + self.decoder_pos_embed
 
         # apply Transformer blocks
