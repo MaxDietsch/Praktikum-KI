@@ -4,7 +4,7 @@ data_root = '../data_dir/kvasir/'
 
 train_pipeline = [
     dict(type='LoadImageFromFile'),
-    dict(type='Resize', scale=(640, 640), interpolation='bicubic'),
+    dict(type='Resize', scale=(320, 320), interpolation='bicubic'),
     dict(type='RandomFlip', prob=0.5),
     dict(type='mmcls.PackClsInputs'),
 ]
