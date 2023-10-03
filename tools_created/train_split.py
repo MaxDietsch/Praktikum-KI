@@ -52,6 +52,7 @@ if __name__ == "__main__":
     #create_split(directory, percentage)
 
     x = check_ratio("../data_dir/SUN/meta/train1000.txt", 1000)
+    print(x)
     print(f"ratio of positive files is: {x}")
 
 
