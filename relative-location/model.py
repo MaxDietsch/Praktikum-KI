@@ -13,7 +13,6 @@ model = dict(
         out_indices=[4],  
         norm_cfg=dict(type='BN'),
         init_cfg=dict(type='Xavier')),
-    #neck=dict(type='mmcls.GlobalAveragePooling'),
     neck=dict(
         type='RelativeLocNeck',
         in_channels=1024,
