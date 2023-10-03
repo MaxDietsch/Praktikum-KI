@@ -9,7 +9,7 @@ train_pipeline = [
 ]
 
 train_dataloader = dict(
-    batch_size=64,
+    batch_size=32,
     num_workers=8,
     persistent_workers=True,
     sampler=dict(type='DefaultSampler', shuffle=True),
