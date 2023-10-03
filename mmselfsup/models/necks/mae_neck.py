@@ -139,6 +139,8 @@ class MAEPretrainDecoder(BaseModule):
         x = torch.cat([x[:, :1, :], x_], dim=1)
 
         # add pos embed
+        print(x.shape)
+        print(self.decoder_pos_embed)
         x = x + self.decoder_pos_embed
 
         # apply Transformer blocks
