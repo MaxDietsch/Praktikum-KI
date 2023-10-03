@@ -8,7 +8,7 @@ model = dict(
     backbone=dict(type='MAEViT', arch='b', img_size=(224), patch_size=4, mask_ratio=0.75),
     neck=dict(
         type='MAEPretrainDecoder',
-        patch_size=16,
+        patch_size=4,
         in_chans=3,
         embed_dim=768,
         decoder_embed_dim=512,
@@ -19,7 +19,7 @@ model = dict(
     head=dict(
         type='MAEPretrainHead',
         norm_pix=True,
-        patch_size=16,
+        patch_size=4,
         loss=dict(type='MAEReconstructionLoss')),
     init_cfg=[
         dict(type='Xavier', distribution='uniform', layer='Linear'),
