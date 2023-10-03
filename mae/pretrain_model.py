@@ -8,7 +8,7 @@ model = dict(
     backbone=dict(type='MAEViT', arch='s', img_size=(320, 320), patch_size=9, mask_ratio=0.75),
     neck=dict(
         type='MAEPretrainDecoder',
-        num_patches = 3136,
+        num_patches = 1296,
         patch_size=4,
         in_chans=3,
         embed_dim=768,
