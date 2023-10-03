@@ -7,7 +7,7 @@ if torch.cuda.is_available():
     os.environ['CUBLAS_WORKSPACE_CONFIG'] = ':16:8'
 
 cfg = Config.fromfile("./pretrain_configs.py")
-cfg.work_dir = './work_dirs/pretrain'
+cfg.work_dir = './work_dirs/pretrain007'
 
 runner = Runner.from_cfg(cfg)
 runner.train()
