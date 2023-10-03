@@ -2,10 +2,10 @@
 model = dict(
     type='MAE',
     data_preprocessor=dict(
-        mean=[141.46, 95.78, 85.52],
-        std=[81.42, 61.04, 58.85],
+        mean=[7.18, 4.85, 3.47],
+        std=[34.02, 22.52, 16.46],
         bgr_to_rgb=True),
-    backbone=dict(type='MAEViT', arch='s', patch_size=16, mask_ratio=0.75),
+    backbone=dict(type='MAEViT', arch='b', patch_size=16, mask_ratio=0.75),
     neck=dict(
         type='MAEPretrainDecoder',
         patch_size=16,
