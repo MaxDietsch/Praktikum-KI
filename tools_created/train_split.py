@@ -23,9 +23,9 @@ def create_split(directory, percentage):
     os.mkdir(directory + f'/train{str(percentage * 100)}%')
     """
 
-    if os.path.exists(directory + f'/train1000'):
-        shutil.rmtree(directory + f'/train1000')
-    os.mkdir(directory + f'/train1000')
+    if os.path.exists(directory + f'/train100'):
+        shutil.rmtree(directory + f'/train100')
+    os.mkdir(directory + f'/train100')
 
 
     lines = []
@@ -35,23 +35,23 @@ def create_split(directory, percentage):
                 lines.append(line.strip())
     
     #train_file = os.path.join(directory, 'meta', f'train{str(percentage * 100)}%.txt')
-    train_file = os.path.join(directory, 'meta', f'train1000.txt')
+    train_file = os.path.join(directory, 'meta', f'train100.txt')
 
 
     with open(train_file, "w") as trainfile:
         for i, line in tqdm.tqdm(enumerate(lines)):
             file, cls = line.split()
             #shutil.copy(os.path.join(directory, 'train', file), directory + f'/train{str(percentage * 100)}%')
-            shutil.copy(os.path.join(directory, 'train', file), directory + f'/train1000')
+            shutil.copy(os.path.join(directory, 'train', file), directory + f'/train100')
             trainfile.write(line + '\n')
 
 
 if __name__ == "__main__":
     directory = "../data_dir/SUN"
-    percentage = 1000/63490 #0.25
-    #create_split(directory, percentage)
+    percentage = 100/63490 #0.25
+    create_split(directory, percentage)
 
-    x = check_ratio("../data_dir/SUN/meta/train.txt", 63490)
+    x = check_ratio("../data_dir/SUN/meta/train100.txt", 100)
     print(f"ratio of positive files is: {x}")
 
 
