@@ -9,7 +9,7 @@ model = dict(
     neck=dict(
         type='MAEPretrainDecoder',
         num_patches = 1296,
-        patch_size=4,
+        patch_size=9,
         in_chans=3,
         embed_dim=768,
         decoder_embed_dim=512,
@@ -20,7 +20,7 @@ model = dict(
     head=dict(
         type='MAEPretrainHead',
         norm_pix=True,
-        patch_size=4,
+        patch_size=9,
         loss=dict(type='MAEReconstructionLoss')),
     init_cfg=[
         dict(type='Xavier', distribution='uniform', layer='Linear'),
