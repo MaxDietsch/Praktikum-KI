@@ -10,7 +10,7 @@ model = dict(
     backbone=dict(
         type='mmcls.LinearVisionTransformer', 
         img_size = 320,
-        arch='b', 
+        arch='s', 
         patch_size=10, 
         #frozen_stages = 8, 
         init_cfg = dict(type='Xavier')
