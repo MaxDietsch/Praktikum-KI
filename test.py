@@ -9,16 +9,9 @@ import torch
 def parse_args():
     parser = argparse.ArgumentParser(description='Test a model')
     parser.add_argument('algorithm', help='the algorithm which was used for SSL')
-    parser.add_argument('--job', default='train', help='specify if train job or train_scratch (no SSL training) job should be done')
-    parser.add_argument('--dataset', help='the dataset which was used for training')
-    parser.add_argument(
-        '--resume',
-        nargs='?',
-        type=str,
-        const='auto',
-        help='If specified checkpoint path, resume from it, while if not '
-        'specified, try to auto resume from the latest checkpoint '
-        'in the work directory.')
+    parser.add_argument('job', default='train', help='specify if train job or train_scratch (no SSL training) job should be done')
+    parser.add_argument('dataset', help='the dataset which was used for training')
+    
     # When using PyTorch version >= 2.0.0, the `torch.distributed.launch`
     # will pass the `--local-rank` parameter to `tools/train.py` instead
     # of `--local_rank`.
@@ -69,3 +62,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+#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
