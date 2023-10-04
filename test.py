@@ -49,6 +49,7 @@ def main():
         pipeline=cfg.test_pipeline)
     )
 
+    cfg.train_dataloader = None
 
     # build the runner from config
     runner = Runner.from_cfg(cfg)
