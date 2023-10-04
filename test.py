@@ -57,7 +57,7 @@ def main():
 
     # start testing
     print(model_path)
-    #runner.test()
+    runner.test()
 
 
 if __name__ == '__main__':
