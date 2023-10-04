@@ -50,6 +50,8 @@ def main():
     )
 
     cfg.train_dataloader = None
+    cfg.train_cfg = None
+    cfg.optim_wrapper = None
 
     # build the runner from config
     runner = Runner.from_cfg(cfg)
@@ -64,4 +66,4 @@ def main():
 if __name__ == '__main__':
     main()
 
-#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
+#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
