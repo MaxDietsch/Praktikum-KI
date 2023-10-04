@@ -36,8 +36,8 @@ def main():
     cfg.work_dir = osp.join(args.algorithm, "work_dirs", args.job, "results_" + args.dataset)
 
     cfg.test_dataloader =  dict(
-    batch_size=1,
-    num_workers=1,
+    batch_size=32,
+    num_workers=4,
     persistent_workers=True,
     sampler=dict(type='DefaultSampler', shuffle=True),
     collate_fn=dict(type='default_collate'),
@@ -67,4 +67,4 @@ def main():
 if __name__ == '__main__':
     main()
 
-#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
+#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
