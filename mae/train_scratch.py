@@ -4,7 +4,7 @@ import torch
 import os
 
 cfg = Config.fromfile('configs.py')
-cfg.work_dir = './work_dirs/train_scratch/50%'
+cfg.work_dir = './work_dirs/train_scratch/100%'
 
 runner = Runner.from_cfg(cfg)
 runner.train()
