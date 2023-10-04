@@ -43,7 +43,7 @@ def main():
     collate_fn=dict(type='default_collate'),
     dataset=dict(
         type="Sun",
-        data_root="../data_dir/SUN",
+        data_root="./data_dir/SUN",
         ann_file='meta/test.txt',
         data_prefix='test',
         pipeline=cfg.test_pipeline)
@@ -63,4 +63,4 @@ def main():
 if __name__ == '__main__':
     main()
 
-#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
+#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
