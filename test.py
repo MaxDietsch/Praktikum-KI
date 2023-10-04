@@ -52,6 +52,7 @@ def main():
     cfg.train_dataloader = None
     cfg.train_cfg = None
     cfg.optim_wrapper = None
+    cfg.param_scheduler = None
 
     # build the runner from config
     runner = Runner.from_cfg(cfg)
