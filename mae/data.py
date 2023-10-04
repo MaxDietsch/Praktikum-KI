@@ -11,13 +11,13 @@ train_pipeline = [
 
 test_pipeline = [
     dict(type='LoadImageFromFile'),
-    dict(type='Resize', scale=(640, 640), interpolation='bicubic'),
+    dict(type='Resize', scale=(320, 320), interpolation='bicubic'),
     #dict(type='mmcls.ResizeEdge', scale=256, edge='short', backend='pillow'),
     dict(type='mmcls.PackClsInputs'),
 ]
 
 train_dataloader = dict(
-    batch_size=8,
+    batch_size=16,
     num_workers=4,
     persistent_workers=True,
     sampler=dict(type='DefaultSampler', shuffle=True),
@@ -32,7 +32,7 @@ train_dataloader = dict(
 
 
 val_dataloader = dict(
-    batch_size=8,
+    batch_size=16,
     num_workers=4,
     persistent_workers=True,
     sampler=dict(type='DefaultSampler', shuffle=True),
