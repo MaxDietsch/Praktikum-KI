@@ -48,5 +48,7 @@ val_dataloader = dict(
 
 val_evaluator = dict(type='mmcls.Accuracy', topk=(1, 1))
 
+
+
 test_dataloader = val_dataloader
 test_evaluator = val_evaluator

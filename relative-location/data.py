@@ -11,6 +11,7 @@ train_pipeline = [
 
 test_pipeline = [
     dict(type='LoadImageFromFile'),
+    dict(type='Resize', scale=(640, 640), interpolation='bicubic'),
     dict(type='mmcls.PackClsInputs'),
 ]
 
