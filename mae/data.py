@@ -1,6 +1,6 @@
 # dataset settings
-dataset_type = 'Kvasir'
-data_root = '../data_dir/kvasir/'
+dataset_type = 'Sun'
+data_root = '../data_dir/SUN/'
 
 train_pipeline = [
     dict(type='LoadImageFromFile'),
