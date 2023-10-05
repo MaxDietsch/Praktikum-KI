@@ -30,7 +30,8 @@ def main():
     cfg = Config.fromfile(cfg_path)
 
     model_path = osp.join(args.algorithm, "work_dirs", args.job, args.dataset, "epoch_20.pth")
-    cfg.model.init_cfg = dict(type = "Pretrained", checkpoint = model_path)
+    #cfg.model.init_cfg = dict(type = "Pretrained", checkpoint = model_path)
+    cfg.load_from = model_path
 
     # work_dir is determined in this priority: CLI > segment in file > filename
     cfg.work_dir = osp.join(args.algorithm, "work_dirs", args.job, "results_" + args.dataset)
