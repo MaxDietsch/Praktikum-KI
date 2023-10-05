@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#python test.py "$1" "$2" 100%
+python test.py "$1" "$2" 100%
 
 python test.py "$1" "$2" 50%
 
