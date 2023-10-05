@@ -20,8 +20,8 @@ train_dataloader = dict(
     dataset=dict(
         type=dataset_type,
         data_root=data_root,
-        ann_file='meta/train.txt',
-        data_prefix='train',
+        ann_file='meta/train1000.txt',
+        data_prefix='train1000',
         pipeline=train_pipeline),
     sampler=dict(type='DefaultSampler', shuffle=True),
     collate_fn=dict(type='default_collate'),
@@ -42,6 +42,9 @@ val_dataloader = dict(
     persistent_workers=True,
 )
 val_evaluator = dict(type='mmcls.Accuracy', topk=(1, 1))
+
+val_dataloader = None
+val_evaluator = None
 
 test_dataloader = val_dataloader
 test_evaluator = val_evaluator
