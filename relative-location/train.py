@@ -9,7 +9,7 @@ if torch.cuda.is_available():
 cfg = Config.fromfile('configs.py')
 checkpoint_file = './work_dirs/pretrain/resnet_backbone-weights.pth'
 cfg.model.backbone.init_cfg = dict(type='Pretrained', checkpoint=checkpoint_file)
-cfg.work_dir = './work_dirs/train/100'
+cfg.work_dir = './work_dirs/train/10'
 
 runner = Runner.from_cfg(cfg)
 runner.train()
