@@ -37,7 +37,7 @@ def main():
     cfg.work_dir = osp.join(args.algorithm, "work_dirs", args.job, "results_" + args.dataset)
 
     cfg.test_dataloader =  dict(
-    batch_size=80,
+    batch_size=20,
     num_workers=4,
     persistent_workers=True,
     sampler=dict(type='DefaultSampler', shuffle=True),
@@ -57,6 +57,7 @@ def main():
 
     # build the runner from config
     runner = Runner.from_cfg(cfg)
+
     if torch.cuda.is_available():
         os.environ['CUBLAS_WORKSPACE_CONFIG'] = ':16:8'
 
