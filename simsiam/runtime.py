@@ -23,7 +23,7 @@ vis_backends = [dict(type='LocalVisBackend')]
 visualizer = dict(
     type='SelfSupVisualizer', vis_backends=vis_backends, name='visualizer')
 
-randomness = dict(seed=11, deterministic=True)
+randomness = dict(seed=12, deterministic=True)
 
 log_level = 'INFO'
 load_from = None
