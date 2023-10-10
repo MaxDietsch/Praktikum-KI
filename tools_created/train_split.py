@@ -25,7 +25,7 @@ def create_split(directory, percentage):
 
     if os.path.exists(directory + f'/train750'):
         shutil.rmtree(directory + f'/train750')
-    os.mkdir(directory + f'/train10')
+    os.mkdir(directory + f'/train750')
 
 
     lines = []
@@ -51,7 +51,7 @@ if __name__ == "__main__":
     percentage = 750/63490 #0.25
     create_split(directory, percentage)
 
-    x = check_ratio("../data_dir/SUN/meta/train10.txt", 10)
+    x = check_ratio("../data_dir/SUN/meta/train750.txt", 750)
     print(f"ratio of positive files is: {x}")
 
 
