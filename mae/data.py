@@ -25,8 +25,8 @@ train_dataloader = dict(
     dataset=dict(
         type=dataset_type,
         data_root=data_root,
-        ann_file='meta/train750.txt',
-        data_prefix='train750',
+        ann_file='meta/train500.txt',
+        data_prefix='train500',
         pipeline=train_pipeline)
 )
 
