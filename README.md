@@ -1,1 +1,1 @@
-Praktikum for Max Dietsch
+Praktikum of Max Dietsch
